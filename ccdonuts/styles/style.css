@@ -1,0 +1,137 @@
+@charset "UTF-8";
+
+
+/* 
+共通基本ルール
+余白:4倍数
+PCコンテンツ幅：1200px
+font: Noto Sans JP
+font-size: ベース16px 4の倍数
+見出しfont-size: SP→20px,PC→32px
+ＳＰ幅:375px 
+PC幅:1366px
+} */
+
+sample color {
+  color: #FFD233;
+  color: #B392AC;
+  color: #7F5539;
+  color: #D27C2C;
+  color: #EDE0D4;
+  color: #CCCCCC;
+  color: #D9D9D9;
+  color: #BF0000;
+  color: #000000;     /* 透明度50% */
+  color: #E6CCB2;
+  color: #E8C2CA;
+  color: #F7D1CD;
+  color: #FF8877; 
+}
+
+
+
+
+
+/*  */
+/*  */
+/*ドロワーメニュー*/
+.drawer-icon {
+    position: relative;
+    top: -5px;
+    left: 15px;
+    z-index: 1000;
+  }
+
+  .line {
+    display: block;
+    width: 100%;
+    background-color: white;
+    border-radius: 2px;
+    margin: 10px 10px;
+  }
+
+
+.navigation {
+    position: fixed;
+    top: 0;
+    right: -100%; 
+    width: 100%; 
+    height: 50%;
+    background-color: #7F5539;
+    padding-top: 60px;
+    transition: right 0.3s ease;
+    z-index: 900;
+}
+
+.navigation nav {
+  padding: 20px;
+}
+
+.navigation nav ul {
+  list-style: none;
+  text-align: left;
+}
+
+.navigation nav ul li {
+  margin-bottom: 10px;
+}
+
+.navigation nav ul li a {
+  text-decoration: none;
+  width: 100%;
+  color: #fff;
+  font-size: 20px;
+  border-bottom: 1px solid #fff;
+}
+
+
+.isOpen {
+  right: 0;
+}
+
+.menu {
+color: #fff;
+font-size: 24px;
+text-align: center;
+margin-top: 50px;
+margin-bottom: 50px;
+}
+
+.top {
+margin-top: 30px;
+margin-bottom: 30px;
+}
+
+.policy {
+margin-top: 30px;
+margin-bottom: 30px;
+}
+
+.navButton {
+width: 50px;
+height: 50px;
+border-radius: 50%;
+position: absolute;
+left: 300px;
+top: 5px;
+}
+
+.drawerLogo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100px;
+    height: 100px;
+}
+
+.drawerBto {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.drawerIcon {
+    width: 90%;
+    margin-left: 20px;
+}
+/*ドロワーメニューここまで*/
