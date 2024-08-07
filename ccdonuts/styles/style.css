@@ -29,109 +29,1729 @@ sample color {
 }
 
 
+@media screen and (min-width: 768px) {
+
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+}
 
 
-
-/*  */
-/*  */
-/*ドロワーメニュー*/
-.drawer-icon {
-    position: relative;
-    top: -5px;
-    left: 15px;
-    z-index: 1000;
-  }
-
-  .line {
-    display: block;
-    width: 100%;
-    background-color: white;
-    border-radius: 2px;
-    margin: 10px 10px;
-  }
+/*ドロワーメニュー ここから*/
 
 
 .navigation {
-    position: fixed;
-    top: 0;
-    right: -100%; 
-    width: 100%; 
-    height: 50%;
-    background-color: #7F5539;
-    padding-top: 60px;
-    transition: right 0.3s ease;
-    z-index: 900;
-}
-
-.navigation nav {
-  padding: 20px;
+  position: fixed;
+  top: -200%; 
+  left: 0;
+  width: 100%;
+  height: 60%;
+  background-color: #7F5539;
+  padding-top: 60px;
+  transition: top 0.3s ease;
+  z-index: 900;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 .navigation nav ul {
   list-style: none;
   text-align: left;
+  margin-top: 210px;
+  padding-top: 16px;
+}
+
+.navigation nav ul {
+  padding: 0;
 }
 
 .navigation nav ul li {
-  margin-bottom: 10px;
+  margin-top: 16px !important;
+  margin-left: 12px;
+  padding-top: 16px;
+  margin-bottom: 30px;
 }
 
 .navigation nav ul li a {
   text-decoration: none;
   width: 100%;
-  color: #fff;
-  font-size: 20px;
-  border-bottom: 1px solid #fff;
+  color: #FFFFFF;
+  font-size: 35px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  margin-left: 12px;
+}
+
+.solid {
+  width: 100%;
+  padding-top: -200px;
+  border-bottom: 2px solid #FFFFFF;
+  font-weight: bold;
+}
+
+/* 開閉ボタン */
+.navButton {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  left: 30px;
+  top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.navButton span {
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #7F5539;
+  transition: all 0.3s;
+}
+
+.navButton span {
+  display: block;
+  height: 4px;
+  background: #7F5539;
+  margin: 6px 0;
+  transition: all 0.3s ease;
 }
 
 
 .isOpen {
-  right: 0;
-}
-
-.menu {
-color: #fff;
-font-size: 24px;
-text-align: center;
-margin-top: 50px;
-margin-bottom: 50px;
-}
-
-.top {
-margin-top: 30px;
-margin-bottom: 30px;
-}
-
-.policy {
-margin-top: 30px;
-margin-bottom: 30px;
-}
-
-.navButton {
-width: 50px;
-height: 50px;
-border-radius: 50%;
-position: absolute;
-left: 300px;
-top: 5px;
+  top: 0;
 }
 
 .drawerLogo {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 100px;
-    height: 100px;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: 130px;
+  height: 130px;
 }
 
 .drawerBto {
-    position: absolute;
-    top: 10px;
-    right: 10px;
+  position: absolute;
+  top: 30px;
+  right: 30px;
 }
 
 .drawerIcon {
-    width: 90%;
-    margin-left: 20px;
+  margin-left: 20px;
 }
+
+.navButton.open span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.navButton.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.navButton.open span:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+#closeButton {
+  width: 80px;
+  height: auto;
+}
+
 /*ドロワーメニューここまで*/
+
+/* ヘッダー部分ここから */
+
+.mainLogo {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  margin-top: -30px;
+}
+
+ #Logo {
+  width: 144px;
+  height: 126px;
+}
+
+#login {
+  width: 60px;
+  height: 50px;
+}
+
+#cart {
+  width: 60px;
+  height: 50px;
+}
+
+
+
+.navButton {
+  position: relative;
+  top: 60px;
+}
+
+
+.loginIcon {
+  margin-right: 30px;
+  position: absolute; 
+  top: 0; 
+  right: 140px;  
+  margin: 10px;
+  width: 50px; 
+  height: 50px;
+}
+
+
+.login p {
+  position: absolute; 
+  right: 140px;
+  font-size: 24px;
+  top: 60px;
+  font-family: "Noto Sans JP", sans-serif;
+  color: #7F5539;
+}
+
+.cartIcon {
+  position: absolute; 
+  top: 0; 
+  right: 10px; 
+  margin: 10px;  
+  width: 50px; 
+  height: 50px; 
+}
+
+.cart p {
+  position: absolute; 
+  right: 10px;
+  font-size: 24px;
+  top: 60px;
+  font-family: "Noto Sans JP", sans-serif;
+  color: #7F5539;
+}
+
+.subIcon {
+  position: relative;
+  bottom:110px;
+  right: 20px;
+} 
+
+
+
+/* 検索バーここから */
+
+.searchContainer {
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  margin-bottom: 20px;
+  margin-top: 80px;
+  width: 100%;
+  font-size: 26px;
+}
+
+#searchButton {
+  padding: 13px 13px;
+  border: 1px solid #000000;
+  background-color: #D9D9D9;
+  color: white;
+  cursor: pointer;
+  width: 90px;
+  height: 90px;
+  position: relative;
+}
+
+#searchButton img {
+  width: 40px;
+  height: auto;
+}
+
+#searchButton:hover {
+  background-color: #D9D9D9;
+}
+
+#searchInput {
+  width: 800px;
+  border: 1px solid #000000;
+  outline: none;
+  border-left: none;
+  font-size: 40px;
+  height: 86px;
+}
+
+/* 検索バー　ここまで */
+
+/* ヘッダー部分ここまで */
+
+
+
+/* ここからfooter */
+
+
+
+
+.footerNav nav ul li a {
+  text-decoration: none;
+  color: #7F5539;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 24px;
+
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-list li {
+  position: relative;
+  padding-left: 35px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.nav-list li::before {
+  content: "|";
+  position: absolute;
+  left: 0;
+  color: #7F5539;
+  font-size: 2.5em;
+  line-height: 1em;
+}
+
+.pcSns {
+  display: none;
+}
+
+#sns {
+  width: 80px;
+  height: 80px;
+}
+
+.spSns {
+  margin-top: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#footerLogo {
+  width: 150px;
+  height: 150px;
+}
+
+.footerContainer {
+  position: relative;
+}
+
+.footrLogo {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+}
+
+.footersolid {
+  width: 100%;
+  border: 1px solid #7F5539;
+  margin-top: 180px;
+}
+
+.footerCopy {
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  color: #7F5539;
+}
+
+header {
+  background-color: #EDE0D4;
+  padding-bottom: 5px;
+}
+
+footer {
+  background-color: #EDE0D4;
+  padding-top: 5px;
+}
+
+
+
+/* ここからbody */
+
+
+.text {
+  font-size: 28px;
+  font-family: "Noto Sans JP", sans-serif;
+  color: #7F5539;
+  margin-left: 30px;
+  line-height: 60px;
+  margin-top: 20px;
+}
+
+img {
+  width: 100%;
+}
+
+#mainImg {
+  width: 100%;
+  height: auto;
+}
+
+.mainImg1 {
+  margin-top: 30px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+}
+
+
+
+.prText {
+  color: #FFFFFF;
+  background-color: #FF8877;
+  display: block; 
+  width: 100px;  
+  height: 100px; 
+  border-radius: 50%; 
+  text-align: center; 
+  line-height: 100px; 
+  position: relative; 
+  font-size: 26px;
+  top: 70px;
+  left: 50px;
+}
+
+.subImg {
+  width: 420px;
+  height: auto;
+  margin-top: -50px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#subImg1 {
+  margin-left: 40px;
+}
+
+#subImg3 {
+  width: 92%;
+  height: auto;
+  margin: 40px;
+}
+
+.mainImg2 {
+  background-image: url('../images/spMainImage2.png');
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat; 
+  text-align: center;
+  color: #FFFFFF;
+  width: 100%;
+  height: 70vh;
+}
+
+.mainImg2 h1 {
+  padding-top: 250px;
+  font-size: 60px;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.mainImg2 h2 {
+  font-size: 36px;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.mainImg2 h3 {
+  font-size: 50px;
+  padding-top: 90px;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.mainImg2 h4 {
+  font-size: 36px;
+  margin-top: -40px;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+
+/* ランキング */
+
+.h5 {
+  text-align: center;
+  margin-top: 100px;
+  font-size: 60px;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.underline {
+  display: inline; 
+  border-bottom: 5px solid #FFD233;
+  text-align: center;
+}
+
+.rankingContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 0 30px;
+  margin-top: 100px;
+  margin-bottom: 150px;
+}
+.rankingItem {
+  flex: 1 1 calc(50% - 30px);
+  margin: 50px 0;
+  box-sizing: border-box;
+
+}
+.rankingItem:nth-child(odd) {
+  margin-right: 20px;
+}
+.rankingItem:nth-child(even) {
+  margin-left: 20px;
+}
+
+
+
+#no1 {
+  background-color: #FFD233;
+  width: 80px;
+  height: 80px;
+  color: #FFFFFF;
+  font-size: 32px;
+  text-align: center;
+  margin-left: 180px;
+  line-height: 80px;
+  margin-bottom: 50px;
+}
+
+#no2 {
+  background-color: #CCCCCC;
+  width: 80px;
+  height: 80px;
+  color: #FFFFFF;
+  font-size: 32px;
+  text-align: center;
+  margin-left: 180px;
+  line-height: 80px;
+  margin-bottom: 50px;
+}
+
+#no3 {
+  background-color: #D27C2C;
+  width: 80px;
+  height: 80px;
+  color: #FFFFFF;
+  font-size: 32px;
+  text-align: center;
+  margin-left: 180px;
+  line-height: 80px;
+  margin-bottom: 50px;
+}
+
+#no4 {
+  background-color: #E8C2CA;
+  width: 80px;
+  height: 80px;
+  color: #FFFFFF;
+  font-size: 32px;
+  text-align: center;
+  margin-left: 180px;
+  line-height: 80px;
+  margin-bottom: 50px;
+}
+
+#no5 {
+  background-color: #E8C2CA;
+  width: 80px;
+  height: 80px;
+  color: #FFFFFF;
+  font-size: 32px;
+  text-align: center;
+  margin-left: 180px;
+  line-height: 80px;
+  margin-bottom: 50px;
+}
+
+#no6 {
+  background-color: #E8C2CA;
+  width: 80px;
+  height: 80px;
+  color: #FFFFFF;
+  font-size: 32px;
+  text-align: center;
+  margin-left: 180px;
+  line-height: 80px;
+  margin-bottom: 50px;
+}
+
+
+
+.rankingText {
+  color: #7F5539;
+  font-size: 24px;
+  font-family: "Noto Sans JP", sans-serif;
+  width: 432px;
+  text-decoration: none;
+} 
+
+.price {
+  color: #BF0000;
+  font-family: "Noto Sans JP", sans-serif;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+
+
+ button {
+  background-color: #7F5539;
+  border: #7F5539;
+  color: #FFFFFF;
+  font-family: "Noto Sans JP", sans-serif;
+  width: 432px;
+  height: 90px;
+
+}
+
+button p {
+  font-size: 28px;
+  font-family: "Noto Sans JP", sans-serif;
+  line-height: 30px;
+} 
+
+/* ランキングここまで */
+
+
+/* ぱんくず */
+
+.breadCrumb{
+  width:100%;
+  border-bottom: 1px solid #000000;
+}
+
+.breadCrumb nav ul{
+  display:flex;
+  padding:8px 0;
+  margin:0;
+}
+    
+nav ul li{
+  list-style: none;
+  font-size: 28px;
+  font-family: "Noto Sans JP", sans-serif;
+  color: #7F5539;
+  margin-left: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.navArrow {
+  padding-top: 18px;
+  padding-bottom: 15px;
+}
+
+.breadCrumb nav ul li a{
+  text-decoration: none;
+  color: #7F5539;
+}
+
+.navArrow {
+  font-size: 28px;
+}
+
+/* 商品一覧ここから */
+
+.subTitle {
+  text-align: center;
+  font-size: 34px;
+  font-family: "Noto Sans JP", sans-serif;
+  color: #7F5539;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+
+/* 商品一覧詳細はここから */
+
+.productImg {
+  max-width: 100%;
+  width: 880px;
+  margin: 40px 40px 40px 40px ;
+}
+
+.productTitle {
+  margin-left: 40px;
+  color: #7F5539;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+
+.productsolid {
+  text-decoration: underline;
+  border: 1px solid;
+  color: #7F5539;
+  margin-left: 20px;
+  margin-right: 40px;
+  margin-bottom: 40px;
+}
+
+.productText {
+  font-size: 24px;
+  font-family: "Noto Sans JP", sans-serif;
+  color: #7F5539;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: 40px;
+  text-align: left;
+
+}
+
+.productprice {
+  color: #BF0000;
+  margin-left: 40px;
+  margin-top: 70px;
+  margin-bottom: 140px;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+form {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px
+}
+label {
+  font-size: 16px;
+  margin-bottom: 10px;
+  display: block;
+}
+input[type="number"] {
+  padding: 32px;
+  margin-bottom: 10px;
+  margin-left: 40px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  font-size: 36px;
+  width: 120px;
+}
+
+span {
+  font-size: 40px; 
+  position: relative;
+  top: 40px;
+  font-weight: bold;
+  margin-left: 15px;
+  margin-right: 40px;
+}
+
+input[type="submit"] {
+  background-color: #7F5539;
+  color: white;
+  border: none;
+  padding: 30px 100px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 36px;
+  font-family: "Noto Sans JP", sans-serif;
+  margin-bottom: 250px;
+}
+input[type="submit"]:hover {
+  background-color: #7F5539;
+}
+
+
+/* いいねボタンここから */
+
+.likeButton {
+  color: #e5348c;
+  width: 110px;
+  height: 110px;
+  background-color: transparent;
+  border: 0.2em solid;
+  box-shadow: 0 0.25em 1em -0.25em;
+  cursor: pointer;
+  transition: color 150ms ease-in-out, background-color 150ms ease-in-out, transform 150ms ease-in-out;
+  outline: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: 730px;
+  bottom:   361px;
+}
+
+.likeButton__icon {
+  display: inline-block;
+  fill: currentColor;
+  width: 60px;
+  height: 60px;
+}
+
+.likeButton:hover {
+  color: #e5348c;
+}
+
+.likeButton.liked {
+  color: #ffffff;
+  background-color: #e5348c;
+  border-color: #e5348c;
+}
+    /* いいねボタンここまで */
+
+
+  /* ログイン画面はここから */
+
+
+  .parent {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 80px;
+}
+
+.loginTitle {
+    display: inline-block; 
+    border-bottom: 5px solid #FFD233;
+    text-align: center;
+}
+
+.loginText {
+  border: 2px solid #7F5539;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  width: 80%; 
+  max-width: 800px; 
+  box-sizing: border-box;
+}
+
+.loginBefore {
+  font-size: 20px;
+  margin-top: 50px;
+  text-align: right;
+  width: 80%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto; 
+  margin-bottom: 200px;
+}
+
+.login-form label {
+    font-size: 36px; 
+}
+
+.login-form input {
+    font-size: 32px; 
+    padding: 15px; 
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    margin: auto;
+}
+
+.login-form input {
+    margin-bottom: 20px;
+}
+
+.login-form input[type="submit"] {
+    align-self: center;
+    margin-top: 10px;
+}
+
+/* ログイン画面ここまで */
+
+/* ログイン完了画面ここから */
+
+.loginSccessTitle {
+  display: inline-block; 
+  border-bottom: 5px solid #FFD233;
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 110px;
+}
+
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.loginMessage {
+  font-size: 28px;
+  margin-bottom: 20px;
+  border: 1px solid #F7D1CD;
+  padding: 80px 180px 50px 180px;
+  font-family: "Noto Sans JP", sans-serif;
+  color: #7F5539;
+}
+
+.loginMessage p {
+  margin-bottom: 30px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.loginAther {
+  display: flex;
+  flex-direction: column;
+  color: #7F5539;
+}
+
+.loginBefore a {
+  text-decoration: none;
+}
+
+/* ログイン完了画面ここまで */
+
+
+
+
+
+/* ここまでfooter */
+
+
+/* ここからbody */
+
+
+.pcImage {
+  display: none;
+}
+
+.text {
+  font-size: 28px;
+  font-family: "Noto Sans JP", sans-serif;
+  color: #7F5539;
+  margin-left: 30px;
+  line-height: 60px;
+  margin-top: 20px;
+}
+
+img {
+  width: 100%;
+}
+
+#mainImg {
+  width: 100%;
+  height: auto;
+}
+
+.mainImg1 {
+  margin-top: 30px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+}
+
+
+
+.prText {
+  color: #FFFFFF;
+  background-color: #FF8877;
+  display: block; 
+  width: 100px;  
+  height: 100px; 
+  border-radius: 50%; 
+  text-align: center; 
+  line-height: 100px; 
+  position: relative; 
+  font-size: 26px;
+  top: 70px;
+  left: 50px;
+}
+
+.subImg {
+  width: 420px;
+  height: auto;
+  margin-top: -50px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#subImg1 {
+  margin-left: 40px;
+}
+
+#subImg3 {
+  width: 92%;
+  height: auto;
+  margin: 40px;
+}
+
+.mainImg2 {
+  background-image: url('../images/spMainImage2.png');
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat; 
+  text-align: center;
+  color: #FFFFFF;
+  width: 100%;
+  height: 70vh;
+}
+
+.mainImg2 h1 {
+  padding-top: 250px;
+  font-size: 60px;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.mainImg2 h2 {
+  font-size: 36px;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.mainImg2 h3 {
+  font-size: 50px;
+  padding-top: 90px;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.mainImg2 h4 {
+  font-size: 36px;
+  margin-top: -40px;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+
+/* ランキング */
+
+.h5 {
+  text-align: center;
+  margin-top: 100px;
+  font-size: 60px;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.underline {
+  display: inline; 
+  border-bottom: 5px solid #FFD233;
+  text-align: center;
+}
+
+.rankingContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 0 30px;
+  margin-top: 100px;
+  margin-bottom: 150px;
+}
+.rankingItem {
+  flex: 1 1 calc(50% - 30px);
+  margin: 50px 0;
+  box-sizing: border-box;
+
+}
+.rankingItem:nth-child(odd) {
+  margin-right: 20px;
+}
+.rankingItem:nth-child(even) {
+  margin-left: 20px;
+}
+
+
+
+#no1 {
+  background-color: #FFD233;
+  width: 80px;
+  height: 80px;
+  color: #FFFFFF;
+  font-size: 32px;
+  text-align: center;
+  margin-left: 180px;
+  line-height: 80px;
+  margin-bottom: 50px;
+}
+
+#no2 {
+  background-color: #CCCCCC;
+  width: 80px;
+  height: 80px;
+  color: #FFFFFF;
+  font-size: 32px;
+  text-align: center;
+  margin-left: 180px;
+  line-height: 80px;
+  margin-bottom: 50px;
+}
+
+#no3 {
+  background-color: #D27C2C;
+  width: 80px;
+  height: 80px;
+  color: #FFFFFF;
+  font-size: 32px;
+  text-align: center;
+  margin-left: 180px;
+  line-height: 80px;
+  margin-bottom: 50px;
+}
+
+#no4 {
+  background-color: #E8C2CA;
+  width: 80px;
+  height: 80px;
+  color: #FFFFFF;
+  font-size: 32px;
+  text-align: center;
+  margin-left: 180px;
+  line-height: 80px;
+  margin-bottom: 50px;
+}
+
+#no5 {
+  background-color: #E8C2CA;
+  width: 80px;
+  height: 80px;
+  color: #FFFFFF;
+  font-size: 32px;
+  text-align: center;
+  margin-left: 180px;
+  line-height: 80px;
+  margin-bottom: 50px;
+}
+
+#no6 {
+  background-color: #E8C2CA;
+  width: 80px;
+  height: 80px;
+  color: #FFFFFF;
+  font-size: 32px;
+  text-align: center;
+  margin-left: 180px;
+  line-height: 80px;
+  margin-bottom: 50px;
+}
+
+
+
+.rankingText {
+  color: #7F5539;
+  font-size: 24px;
+  font-family: "Noto Sans JP", sans-serif;
+  width: 432px;
+  text-decoration: none;
+} 
+
+.price {
+  color: #BF0000;
+  font-family: "Noto Sans JP", sans-serif;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+
+
+ button {
+  background-color: #7F5539;
+  border: #7F5539;
+  color: #FFFFFF;
+  font-family: "Noto Sans JP", sans-serif;
+  width: 432px;
+  height: 90px;
+
+}
+
+button p {
+  font-size: 28px;
+  font-family: "Noto Sans JP", sans-serif;
+  line-height: 30px;
+} 
+
+/* ランキングここまで */
+
+
+/* ぱんくず */
+
+.breadCrumb{
+  width:100%;
+  border-bottom: 1px solid #000000;
+}
+
+.breadCrumb nav ul{
+  display:flex;
+  padding:8px 0;
+  margin:0;
+}
+    
+nav ul li{
+  list-style: none;
+  font-size: 28px;
+  font-family: "Noto Sans JP", sans-serif;
+  color: #7F5539;
+  margin-left: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.navArrow {
+  padding-top: 18px;
+  padding-bottom: 15px;
+}
+
+.breadCrumb nav ul li a{
+  text-decoration: none;
+  color: #7F5539;
+}
+
+.navArrow {
+  font-size: 28px;
+}
+
+/* 商品一覧ここから */
+
+.subTitle {
+  text-align: center;
+  font-size: 34px;
+  font-family: "Noto Sans JP", sans-serif;
+  color: #7F5539;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+
+/* 商品一覧詳細はここから */
+
+.productImg {
+  max-width: 100%;
+  width: 880px;
+  margin: 40px 40px 40px 40px ;
+}
+
+.productTitle {
+  margin-left: 40px;
+  color: #7F5539;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+
+.productsolid {
+  text-decoration: underline;
+  border: 1px solid;
+  color: #7F5539;
+  margin-left: 20px;
+  margin-right: 40px;
+  margin-bottom: 40px;
+}
+
+.productText {
+  font-size: 24px;
+  font-family: "Noto Sans JP", sans-serif;
+  color: #7F5539;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: 40px;
+  text-align: left;
+
+}
+
+.productprice {
+  color: #BF0000;
+  margin-left: 40px;
+  margin-top: 70px;
+  margin-bottom: 140px;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+form {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px
+}
+label {
+  font-size: 16px;
+  margin-bottom: 10px;
+  display: block;
+}
+input[type="number"] {
+  padding: 32px;
+  margin-bottom: 10px;
+  margin-left: 40px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  font-size: 36px;
+  width: 120px;
+}
+
+span {
+  font-size: 40px; 
+  position: relative;
+  top: 40px;
+  font-weight: bold;
+  margin-left: 15px;
+  margin-right: 40px;
+}
+
+input[type="submit"] {
+  background-color: #7F5539;
+  color: white;
+  border: none;
+  padding: 30px 100px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 36px;
+  font-family: "Noto Sans JP", sans-serif;
+  margin-bottom: 250px;
+}
+input[type="submit"]:hover {
+  background-color: #7F5539;
+}
+
+
+/* いいねボタンここから */
+
+.likeButton {
+  color: #e5348c;
+  width: 110px;
+  height: 110px;
+  background-color: transparent;
+  border: 0.2em solid;
+  box-shadow: 0 0.25em 1em -0.25em;
+  cursor: pointer;
+  transition: color 150ms ease-in-out, background-color 150ms ease-in-out, transform 150ms ease-in-out;
+  outline: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: 730px;
+  bottom:   361px;
+}
+
+.likeButton__icon {
+  display: inline-block;
+  fill: currentColor;
+  width: 60px;
+  height: 60px;
+}
+
+.likeButton:hover {
+  color: #e5348c;
+}
+
+.likeButton.liked {
+  color: #ffffff;
+  background-color: #e5348c;
+  border-color: #e5348c;
+}
+    /* いいねボタンここまで */
+
+
+  /* ログイン画面はここから */
+
+
+  .parent {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 80px;
+}
+
+.loginTitle {
+    display: inline-block; 
+    border-bottom: 5px solid #FFD233;
+    text-align: center;
+}
+
+.loginText {
+  border: 2px solid #7F5539;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  width: 80%; 
+  max-width: 800px; 
+  box-sizing: border-box;
+}
+
+.loginBefore {
+  font-size: 20px;
+  margin-top: 50px;
+  text-align: right;
+  width: 80%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto; 
+  margin-bottom: 200px;
+}
+
+.login-form label {
+    font-size: 36px; 
+}
+
+.login-form input {
+    font-size: 32px; 
+    padding: 15px; 
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    margin: auto;
+}
+
+.login-form input {
+    margin-bottom: 20px;
+}
+
+.login-form input[type="submit"] {
+    align-self: center;
+    margin-top: 10px;
+}
+
+/* ログイン画面ここまで */
+
+/* ログイン完了画面ここから */
+
+.loginSccessTitle {
+  display: inline-block; 
+  border-bottom: 5px solid #FFD233;
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 110px;
+}
+
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.loginMessage {
+  font-size: 28px;
+  margin-bottom: 20px;
+  border: 1px solid #F7D1CD;
+  padding: 80px 180px 50px 180px;
+  font-family: "Noto Sans JP", sans-serif;
+  color: #7F5539;
+}
+
+.loginMessage p {
+  margin-bottom: 30px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.loginAther {
+  display: flex;
+  flex-direction: column;
+  color: #7F5539;
+}
+
+.loginBefore a {
+  text-decoration: none;
+}
+
+/* ログイン完了画面ここまで */
+
+
+
+}
+
+
+
+@media (max-width: 769px) {
+
+
+
+  * { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+  }
+
+
+  .headerContainer {
+    display: none;
+  }
+
+  .navigation {
+    display: none;
+  }
+
+  /* ヘッダー部分ここから */
+
+ .mainLogo {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  padding-top: 5px;
+
+}
+
+ #Logo {
+  width: 20px;
+  height: 20px;
+}
+
+#login {
+  width: 10px;
+  height: auto;
+}
+
+#cart {
+  width: 10px;
+  height: auto;
+}
+
+
+
+
+
+.loginIcon {
+  position: absolute; 
+  top: 0; 
+  right: 50px;  
+  margin: 10px;
+}
+
+.cartIcon {
+  position: absolute; 
+  top: 0; 
+  right: 10px; 
+  margin: 10px;  
+}
+
+
+.login p {
+  position: absolute; 
+  right: 55px;
+  font-size: 5px;
+  top: 20px;
+  font-family: "Noto Sans JP", sans-serif;
+  color: #7F5539;
+}
+
+.cart p {
+  position: absolute; 
+  right: 16px;
+  font-size: 5px;
+  top: 20px;
+  font-family: "Noto Sans JP", sans-serif;
+  color: #7F5539;
+}
+
+
+header {
+  background-color: #EDE0D4;
+
+}
+
+
+
+
+/* 検索バーここから */
+
+
+
+.searchContainer {
+  margin-top: 10px;
+  background-color: #B392AC;
+  display: flex; /* Flexboxで整列 */
+  align-items: center; /* 縦方向に中央揃え */
+  padding: 5px; /* 内側の余白 */
+}
+
+.searchClumn {
+  display: flex; /* Flexboxで横並びに */
+  align-items: center; /* 縦方向に中央揃え */
+  justify-content: flex-end; /* 右詰めに配置 */
+  width: 100%; /* コンテナの幅を全体に設定 */
+}
+
+#searchInput {
+  font-size: 14px;
+  border: 1px solid #000;
+  height: 12px; /* 高さを短くする */
+  width: 70px; /* 幅を短くする */
+  padding: 0 8px; /* 内側の余白を調整 */
+  box-sizing: border-box; /* ボーダーとパディングを幅に含める */
+}
+
+#searchButton {
+  padding: 0; /* 内側の余白をリセット */
+  border: 1px solid #000;
+  background-color: #D9D9D9;
+  color: black;
+  cursor: pointer;
+  width: 13px; /* 幅を短くする */
+  height: 12px; /* 高さを短くする */
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+}
+
+#searchButton img {
+  width: 7px; 
+  height: 7px;
+}
+
+#searchButton:hover {
+  background-color: #C0C0C0;
+}
+
+/* 検索バー　ここまで */
+
+
+/* ヘッダー部分ここまで */
+
+/* footerここから */
+
+footer {
+  width: 100%;
+}
+
+
+.footerNav nav ul li a {
+  text-decoration: none;
+  color: #7F5539;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 4px;
+
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+
+}
+
+
+.nav-list li::before {
+  content: "|";
+  color: #B392AC;
+}
+
+.spSns {
+  display: none;
+}
+
+#sns {
+  width: 10px;
+  height: 10px;
+}
+
+
+
+.footerContainer {
+  width: 80%; 
+  margin: 0 auto; 
+  text-align: center;  
+}
+
+
+#footerLogo {
+  width: 40px;
+  height: 40px;
+}
+
+
+
+.footersolid {
+  width: 100%;
+  border: 1px solid #7F5539;
+}
+
+.footerCopy {
+  display: flex;
+  justify-content: center;
+  font-size: 4px;
+  color: #7F5539;
+  margin-top: 10px;
+  padding-bottom: 10px;
+}
+
+header {
+  background-color: #EDE0D4;
+  padding-bottom: 5px;
+}
+
+footer {
+  background-color: #EDE0D4;
+
+}
+
+/* footerここまで */
+
+/* ここからbody */
+
+body {
+  max-width: 100%;
+}
+
+img {
+  max-width: 100%;
+}
+
+.spImage {
+  display: none;
+}
+
+
+.text {
+  font-size: 4px;
+  margin-left: 30px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+
+.container {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+}
+
+.column img {
+  max-width: 100px; /* 画像サイズを小さくして確認 */
+  height: auto;
+}
+
+
+/* 
+
+.prText {
+  color: #FFFFFF;
+  background-color: #FF8877;
+  display: block; 
+  width: 100px;  
+  height: 100px; 
+  border-radius: 50%; 
+  text-align: center; 
+  line-height: 100px; 
+  position: relative; 
+  font-size: 26px;
+  top: 70px;
+  left: 50px;
+}
+
+.subImg {
+  width: 420px;
+  height: auto;
+  margin-top: -50px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#subImg1 {
+  margin-left: 40px;
+} */
+
+}
