@@ -4,6 +4,8 @@
 
    <p class="text">ようこそ　ゲスト様</p>
 
+   <p class="textSolid"></p>
+
     <div class="spImage">
         <img id="mainImg1" src="images/spMainImage1.png" alt="メイン画像" class="mainImg1">
    </div>
@@ -62,7 +64,7 @@
             <div class="rankingItem">
                 <p id="no2">2</p>
                 <img src="images/spSubImage5.png" alt="ランキング画像2">
-                <a class="rankingText" href="#">フルーツドーナツセット (12個入り)</a>
+                <a class="rankingText" href="productDetails2.php">フルーツドーナツセット (12個入り)</a>
 
                 <p class="price">税込み ￥3,500</p>
                 <button><p>カートに入れる</p></button>

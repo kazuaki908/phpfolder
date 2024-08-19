@@ -1476,13 +1476,135 @@ a:hover {
   }
 
 
-  .headerContainer {
-    display: none;
-  }
 
-  .navigation {
-    display: none;
-  }
+/*ドロワーメニュー ここから*/
+
+.headerContainer {
+  display: none;
+}
+
+/* 
+.navigation {
+  position: fixed;
+  top: -200%; 
+  left: 0;
+  width: 100%;
+  height: 60%;
+  background-color: #7F5539;
+  padding-top: 60px;
+  transition: top 0.3s ease;
+  z-index: 900;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.navigation nav ul {
+  list-style: none;
+  text-align: left;
+  margin-top: 210px;
+  padding-top: 16px;
+}
+
+.navigation nav ul {
+  padding: 0;
+}
+
+.navigation nav ul li {
+  margin-top: 16px !important;
+  margin-left: 12px;
+  padding-top: 16px;
+  margin-bottom: 30px;
+}
+
+.navigation nav ul li a {
+  text-decoration: none;
+  width: 100%;
+  color: #FFFFFF;
+  font-size: 35px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  margin-left: 12px;
+}
+
+.solid {
+  width: 100%;
+  padding-top: -200px;
+  border-bottom: 2px solid #FFFFFF;
+  font-weight: bold;
+} */
+
+/* 開閉ボタン */
+/* .navButton {
+  width: 20px;
+  height: 40px;
+  position: relative;
+  left: 30px;
+  top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.navButton span {
+  display: block;
+  width: 30px;
+  height: 1px;
+  background-color: #7F5539;
+  transition: all 0.3s;
+}
+
+.navButton span {
+  display: block;
+  height: 100px;
+  background: #7F5539;
+  margin: 6px 0;
+  transition: all 0.3s ease;
+}
+
+
+.isOpen {
+  top: 0;
+}
+
+.drawerLogo {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: 60px;
+  height: 60px;
+}
+
+.drawerBto {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
+.drawerIcon {
+  margin-left: 20px;
+}
+
+.navButton.open span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.navButton.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.navButton.open span:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+#closeButton {
+  width: 40px;
+  height: auto;
+} */
+
+/*ドロワーメニューここまで*/
 
   /* ヘッダー部分ここから */
 
@@ -1627,10 +1749,7 @@ footer {
 
 .nav-list {
   list-style: none;
-  padding: 0;
-  margin: 0;
   display: flex;
-
 }
 
 
@@ -1715,43 +1834,379 @@ img {
 
 .container {
   display: flex;
-  justify-content: space-between; 
+  justify-content: center; 
   align-items: center; 
+  margin-right: 7px; 
 }
 
 .column img {
   max-width: 100px; /* 画像サイズを小さくして確認 */
   height: auto;
+  margin-top: -20px;
+  margin-left: 11px;
 }
-
-
-/* 
 
 .prText {
-  color: #FFFFFF;
-  background-color: #FF8877;
-  display: block; 
-  width: 100px;  
-  height: 100px; 
-  border-radius: 50%; 
+    color: #FFFFFF;
+    background-color: #FF8877;
+    display: block; 
+    width: 28px;  
+    height: 28px; 
+    border-radius: 50%; 
+    text-align: center; 
+    line-height: 28px; 
+    position: relative; 
+    font-size: 7px;
+    top: 10px;
+    left: 17px;
+}
+
+
+.subImg3{
+  width: 80%;
+  margin-left: 30px; /* コンテナを中央に配置 */
   text-align: center; 
-  line-height: 100px; 
-  position: relative; 
-  font-size: 26px;
-  top: 70px;
-  left: 50px;
+  margin-top: 12px;
 }
 
-.subImg {
-  width: 420px;
-  height: auto;
-  margin-top: -50px;
+.mainImg2 {
+    background-image: url('../images/pcMainImage2.png');
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat; 
+    text-align: center;
+    color: #FFFFFF;
+    width: 100%;
+    height: auto;
+  }
+
+  .mainImg2 h1 {
+    padding-top: 40px;
+    font-size: 8px;
+    font-family: "Noto Sans JP", sans-serif;
+  }
+  
+  .mainImg2 h2 {
+    font-size: 6px;
+    margin-top: 5px;
+    font-family: "Noto Sans JP", sans-serif;
+  }
+  
+  .mainImg2 h3 {
+    font-size: 6px;
+    margin-top: 5px;
+    font-family: "Noto Sans JP", sans-serif;
+  }
+  
+  .mainImg2 h4 {
+    font-size: 6px;
+    /* margin-top: -40px; */
+    font-family: "Noto Sans JP", sans-serif;
+    padding-bottom: 60px;
+  }
+
+  .h5 {
+    text-align: center;
+    margin-top: 60px;
+    font-size: 12px;
+    font-family: "Noto Sans JP", sans-serif;
+  }
+  
+  .underline {
+    display: inline; 
+    border-bottom: 1px solid #FFD233;
+    text-align: center;
+  }
+
+
+
+  .rankingContainer {
+    display: flex;
+    flex-wrap: wrap; /* ここを nowrap から wrap に変更 */
+    width: 100%;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .rankingItem {
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    font-size: 6px;
+    padding-bottom: 150px;
+  }
+
+
+  #no1 {
+    background-color: #FFD233;
+    width: 15px;
+    height: 15px;
+    color: #FFFFFF;
+    font-size: 10px;
+    text-align: center;
+    line-height: 15px;
+    margin-top: 12px;
+    margin-left: 22px;
+    margin-bottom: 5px;
+  }
+  
+#no2 {
+    background-color: #CCCCCC;
+    width: 15px;
+    height: 15px;
+    color: #FFFFFF;
+    font-size: 10px;
+    text-align: center;
+    line-height: 15px;
+    margin-top: 12px;
+    margin-left: 22px;
+    margin-bottom: 5px;
+  }
+  
+  #no3 {
+    background-color: #D27C2C;
+    width: 15px;
+    height: 15px;
+    color: #FFFFFF;
+    font-size: 10px;
+    text-align: center;
+    line-height: 15px;
+    margin-top: 12px;
+    margin-left: 22px;
+    margin-bottom: 5px;
+  } 
+ 
+  #no4 {
+    background-color: #E8C2CA;
+    width: 15px;
+    height: 15px;
+    color: #FFFFFF;
+    font-size: 10px;
+    text-align: center;
+    line-height: 15px;
+    margin-top: 12px;
+    margin-left: 22px;
+    margin-bottom: 5px;
+  }
+  
+  #no5 {
+    background-color: #E8C2CA;
+    width: 15px;
+    height: 15px;
+    color: #FFFFFF;
+    font-size: 10px;
+    text-align: center;
+    line-height: 15px;
+    margin-top: 12px;
+    margin-left: 22px;
+    margin-bottom: 5px;
+  }
+  
+  #no6 {
+    background-color: #E8C2CA;
+    width: 15px;
+    height: 15px;
+    color: #FFFFFF;
+    font-size: 10px;
+    text-align: center;
+    line-height: 15px;
+    margin-top: 12px;
+    margin-left: 22px;
+    margin-bottom: 5px;
+  }
+  
+  
+
+  .rankingText {
+    color: #7F5539;
+    font-size: 5px;
+    font-family: "Noto Sans JP", sans-serif;
+    text-decoration: none;
+  }   
+  
+  .price {
+    color: #BF0000;
+    font-family: "Noto Sans JP", sans-serif;
+    margin-top: 2px;
+    margin-bottom: 4px;
+  }
+  
+  
+  
+   button {
+    background-color: #7F5539;
+    border: #7F5539;
+    color: #FFFFFF;
+    font-family: "Noto Sans JP", sans-serif;
+    width: 50px;
+    height: 12px;
+    margin-left: 4px;
+  }
+  
+  button p {
+    font-size: 6px;
+    font-family: "Noto Sans JP", sans-serif;
+    width: 100%;
+    padding-left: 4px;
+    padding-right: 4px;
+  } 
+
+  /* ぱんくず */
+
+.breadCrumb{
+  width:100%;
+  border-bottom: 1px solid #7F5539;
+}
+
+.breadCrumb nav ul{
+  display:flex;
+  padding:8px 0;
+  margin:0;
+}
+
+nav  {
   margin-left: 20px;
-  margin-right: 20px;
+  margin-top: -5px;
+  margin-bottom: -10px;
+}
+    
+nav ul li{
+  list-style: none;
+  font-size: 6px;
+  font-family: "Noto Sans JP", sans-serif;
+  color: #7F5539;
+  margin-left: 0px;
+  padding-top: 0px;
+  padding-bottom: 6px;
 }
 
-#subImg1 {
-  margin-left: 40px;
-} */
+.navArrow {
+  padding-top: 1px;
+  padding-bottom: 6px;
+}
+
+.breadCrumb nav ul li a{
+  text-decoration: none;
+  color: #7F5539;
+}
+
+.navArrow {
+  font-size: 6px;
+}
+
+.text {
+  font-size: 6px;
+  font-family: "Noto Sans JP", sans-serif;
+  color: #7F5539;
+  margin-left: 20px;
+
+}
+
+.textSolid {
+  border-bottom: 1px solid #7F5539;
+}
+
+
+.subTitle {
+  text-align: center;
+  font-size: 6px;
+  font-family: "Noto Sans JP", sans-serif;
+  color: #7F5539;
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
+
+/* 商品一覧詳細はここから */
+
+.productImg {
+  max-width: 100%;
+  width: 100px;
+  margin: 20px 20px 20px 20px ;
+}
+
+.productContainer {
+  display: flex;
+}
+
+.productColumn {
+  width: 48%;
+} 
+
+ .productTitle {
+  margin-top: 20px;
+  color: #7F5539;
+  margin-bottom: 10px;
+  font-size: 3px;
+}
+
+
+
+.productText {
+  font-size: 5px;
+  font-family: "Noto Sans JP", sans-serif;
+  color: #7F5539;
+  text-align: left;
+  width: 105px;
+} 
+
+.productprice {
+  font-size: 4px;
+  color: #BF0000;
+  margin-left: 0px;
+  margin-top: 10px;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+form {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px
+}
+label {
+  font-size: 6px;
+  margin-bottom: 10px;
+  display: block;
+}
+input[type="number"] {
+  padding: 3px;
+  margin-bottom: 10px;
+  margin-left: 0px;
+  border: 1px solid #000;
+  border-radius: 1x;
+  font-size: 6px;
+  width: 16px;
+  position: relative;
+  bottom: 20px;
+  right: 20px;
+}
+
+span {
+  font-size: 6px; 
+  position: relative;
+  bottom: 15px;
+  right: 20px;
+  font-weight: bold;
+  margin-left: 1px;
+  margin-right: 0px;
+  
+}
+
+input[type="submit"] {
+  background-color: #7F5539;
+  color: white;
+  border: none;
+  padding: 3px 10px;
+  cursor: pointer;
+  font-size: 6px;
+  font-family: "Noto Sans JP", sans-serif;
+  position: relative;
+  bottom: 52px;
+  left: 10px;
+}
+input[type="submit"]:hover {
+  background-color: #7F5539;
+} 
 
 }

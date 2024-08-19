@@ -5,7 +5,7 @@
 <div class="breadCrumb">
         <nav>
             <ul>
-                <li><a href="../index.php">Top</a></li>
+                <li><a href="index.php">Top</a></li>
                 <div class="navArrow">＞</div>
                 <li>商品一覧</li>
             </ul>
@@ -13,6 +13,8 @@
 </div>
 
    <p class="text" id="text">ようこそ　ゲスト様</p>
+
+   <p class="textSolid"></p>
 
    <!-- 商品一覧 -->
 

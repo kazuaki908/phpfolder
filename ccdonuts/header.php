@@ -52,15 +52,31 @@
         <div class="subIcon">
             <div class="login">
             <a href="login.php">
-                <img id="login" src="images/loginIcon.png" alt="login" class="loginIcon">
+                <div class="spImage">
+                    <a href="login-in.php">
+                        <img id="login" src="images/loginIcon.png" alt="login" class="loginIcon"> 
+                    </a>
+                </div>
+                <div class="pcImage">
+                    <a href="login-in.php">
+                        <img id="login" src="images/pcloginIcon.png" alt="login" class="loginIcon">
+                    </a>
+                </div>
                 <p>ログイン</p>
             </a>
             </div>
+
+
             <div class="cart">
-            <a href="login.php">
-                <img id="cart" src="images/cartIcon.png" alt="cart" class="cartIcon">
-                <p>カート</p>
-            </a>
+                <a href="login.php">
+                    <div class="spImage">
+                        <img id="cart" src="images/cartIcon.png" alt="cart" class="cartIcon">
+                    </div>
+                     <div class="pcImage">
+                     <img id="cart" src="images/pcCart.png" alt="cart" class="cartIcon">
+                    </div>
+                    <p>カート</p>
+                </a>
             </div>
         </div>
 
